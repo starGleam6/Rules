@@ -1,0 +1,519 @@
+ipv6: false
+http_port: 8888
+socks_port: 8889
+allow_external_connections: true
+vif_only: true
+geoip_db_url: https://testingcf.jsdelivr.net/gh/Masaiki/GeoIP2-CN/raw/refs/heads@release/Country.mmdb
+proxy_latency_test_url: http://cp.cloudflare.com/generate_204
+direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
+dns:
+  bootstrap:
+  - 233.5.5.5
+  - 119.29.29.29
+  upstreams:
+    SecureDNS:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  forward:
+  - wildcard:
+      match: '*'
+      value: SecureDNS
+  public_ip_lookup_url: https://ifconfig.me/ip
+policy_groups:
+- external:
+    name: 🚀 节点选择
+    type: select
+    urls:
+    - http://这里输入你的订阅链接
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+    hidden: false
+- select:
+    name: Domestic
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png
+- select:
+    name: Others
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+- select:
+    name: AdBlock
+    policies:
+    - REJECT
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
+- select:
+    name: HTTPDNS
+    policies:
+    - DIRECT
+    - REJECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
+- select:
+    name: Netflix
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+- select:
+    name: Disney Plus
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png
+- select:
+    name: YouTube
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
+- select:
+    name: Max
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png
+- select:
+    name: Spotify
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+- select:
+    name: CN Mainland TV
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png
+- select:
+    name: Asian TV
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HKMTMedia.png
+- select:
+    name: Global TV
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
+- select:
+    name: Apple
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+- select:
+    name: Apple TV
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png
+- select:
+    name: Telegram
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram_X.png
+- select:
+    name: Google FCM
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png
+- select:
+    name: Crypto
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency_3.png
+- select:
+    name: Discord
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png
+- select:
+    name: Microsoft
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+- select:
+    name: AI Suite
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+- select:
+    name: PayPal
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png
+- select:
+    name: Scholar
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Scholar.png
+- select:
+    name: Speedtest
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png
+- select:
+    name: Steam
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png
+- select:
+    name: TikTok
+    policies:
+    - 🚀 节点选择
+    - DIRECT
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
+- select:
+    name: miHoYo
+    policies:
+    - DIRECT
+    - 🚀 节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+- auto_test:
+    name: ♻️ 自动切换
+    policies:
+    - 🚀 节点选择
+    interval: 3600
+    tolerance: 100
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+rules:
+- rule_set:
+    name: AdBlock
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/AdBlock.yaml
+    policy: AdBlock
+    disabled: false
+- rule_set:
+    name: HTTPDNS
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/HTTPDNS.yaml
+    policy: HTTPDNS
+    disabled: false
+- rule_set:
+    name: Special
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Special.yaml
+    policy: Special
+    disabled: false
+- rule_set:
+    name: PROXY
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Proxy.yaml
+    policy: 🚀 节点选择
+    disabled: false
+- rule_set:
+    name: Domestic
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Domestic.yaml
+    policy: Domestic
+    disabled: false
+- rule_set:
+    name: Domestic IPs
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Domestic%20IPs.yaml
+    policy: Domestic_IPs
+    disabled: false
+- rule_set:
+    name: LAN
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/LAN.yaml
+    policy: LAN
+    disabled: false
+- rule_set:
+    name: Netflix
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Netflix.yaml
+    policy: Netflix
+    disabled: false
+- rule_set:
+    name: Spotify
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Spotify.yaml
+    policy: Spotify
+    disabled: false
+- rule_set:
+    name: YouTube
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/YouTube.yaml
+    policy: YouTube
+    disabled: false
+- rule_set:
+    name: Max
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Max.yaml
+    policy: Max
+    disabled: false
+- rule_set:
+    name: Bilibili
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Bilibili.yaml
+    policy: Bilibili
+    disabled: false
+- rule_set:
+    name: IQ
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/IQ.yaml
+    policy: IQI
+    disabled: false
+- rule_set:
+    name: IQIYI
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/IQIYI.yaml
+    policy: IQYI
+    disabled: false
+- rule_set:
+    name: Letv
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Letv.yaml
+    policy: Letv
+    disabled: false
+- rule_set:
+    name: Netease Music
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Netease%20Music.yaml
+    policy: Netease_Music
+    disabled: false
+- rule_set:
+    name: Tencent Video
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Tencent%20Video.yaml
+    policy: Tencent_Video
+    disabled: false
+- rule_set:
+    name: Youku
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Youku.yaml
+    policy: Youku
+    disabled: false
+- rule_set:
+    name: WeTV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/WeTV.yaml
+    policy: WeTV
+    disabled: false
+- rule_set:
+    name: ABC
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/ABC.yaml
+    policy: ABC
+    disabled: false
+- rule_set:
+    name: Abema TV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Abema%20TV.yaml
+    policy: Abema_TV
+    disabled: false
+- rule_set:
+    name: Amazon
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Amazon.yaml
+    policy: Amazon
+    disabled: false
+- rule_set:
+    name: Apple Music
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20Music.yaml
+    policy: Apple_Music
+    disabled: false
+- rule_set:
+    name: Apple News
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20News.yaml
+    policy: Apple_News
+    disabled: false
+- rule_set:
+    name: Apple TV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20TV.yaml
+    policy: Apple_TV
+    disabled: false
+- rule_set:
+    name: Bahamut
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Bahamut.yaml
+    policy: Bahamut
+    disabled: false
+- rule_set:
+    name: BBC iPlayer
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/BBC%20iPlayer.yaml
+    policy: BBC_iPlayer
+    disabled: false
+- rule_set:
+    name: DAZN
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/DAZN.yaml
+    policy: DAZN
+    disabled: false
+- rule_set:
+    name: Discovery Plus
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Discovery%20Plus.yaml
+    policy: Discovery_Plus
+    disabled: false
+- rule_set:
+    name: Disney Plus
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Disney%20Plus.yaml
+    policy: Disney_Plus
+    disabled: false
+- rule_set:
+    name: DMM
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/DMM.yaml
+    policy: DMM
+    disabled: false
+- rule_set:
+    name: encoreTVB
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/encoreTVB.yaml
+    policy: encoreTVB
+    disabled: false
+- rule_set:
+    name: F1 TV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/F1%20TV.yaml
+    policy: F1_TV
+    disabled: false
+- rule_set:
+    name: Fox Now
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Fox%20Now.yaml
+    policy: Fox_Now
+    disabled: false
+- rule_set:
+    name: Fox+
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Fox%2B.yaml
+    policy: Fox+
+    disabled: false
+- rule_set:
+    name: Hulu Japan
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Hulu%20Japan.yaml
+    policy: Hulu_Japan
+    disabled: false
+- rule_set:
+    name: Hulu
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Hulu.yaml
+    policy: Hulu
+    disabled: false
+- rule_set:
+    name: Japonx
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Japonx.yaml
+    policy: Japonx
+    disabled: false
+- rule_set:
+    name: JOOX
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/JOOX.yaml
+    policy: JOOX
+    disabled: false
+- rule_set:
+    name: KKBOX
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/KKBOX.yaml
+    policy: KKBOX
+    disabled: false
+- rule_set:
+    name: KKTV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/KKTV.yaml
+    policy: KKTV
+    disabled: false
+- rule_set:
+    name: Line TV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Line%20TV.yaml
+    policy: Line_TV
+    disabled: false
+- rule_set:
+    name: myTV SUPER
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/myTV%20SUPER.yaml
+    policy: myTV_SUPER
+    disabled: false
+- rule_set:
+    name: Niconico
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Niconico.yaml
+    policy: Niconico
+    disabled: false
+- rule_set:
+    name: Pandora
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Pandora.yaml
+    policy: Pandora
+    disabled: false
+- rule_set:
+    name: PBS
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/PBS.yaml
+    policy: PBS
+    disabled: false
+- rule_set:
+    name: Pornhub
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Pornhub.yaml
+    policy: Pornhub
+    disabled: false
+- rule_set:
+    name: Soundcloud
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Soundcloud.yaml
+    policy: Soundcloud
+    disabled: false
+- rule_set:
+    name: ViuTV
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/ViuTV.yaml
+    policy: ViuTV
+    disabled: false
+- rule_set:
+    name: Telegram
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Telegram.yaml
+    policy: Telegram
+    disabled: false
+- rule_set:
+    name: Crypto
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Crypto.yaml
+    policy: Crypto
+    disabled: false
+- rule_set:
+    name: Discord
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Discord.yaml
+    policy: Discord
+    disabled: false
+- rule_set:
+    name: Steam
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Steam.yaml
+    policy: Steam
+    disabled: false
+- rule_set:
+    name: TikTok
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/TikTok.yaml
+    policy: TikTok
+    disabled: false
+- rule_set:
+    name: Speedtest
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Speedtest.yaml
+    policy: Speedtest
+    disabled: false
+- rule_set:
+    name: PayPal
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/PayPal.yaml
+    policy: PayPal
+    disabled: false
+- rule_set:
+    name: Microsoft
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Microsoft.yaml
+    policy: Microsoft
+    disabled: false
+- rule_set:
+    name: AI Suite
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/AI%20Suite.yaml
+    policy: AI Suite
+    disabled: false
+- rule_set:
+    name: Apple
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Apple.yaml
+    policy: Apple
+    disabled: false
+- rule_set:
+    name: Google FCM
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Google%20FCM.yaml
+    policy: Google FCM
+    disabled: false
+- rule_set:
+    name: Scholar
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Scholar.yaml
+    policy: Scholar
+    disabled: false
+- rule_set:
+    name: miHoYo
+    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/miHoYo.yaml
+    policy: miHoYo
+    disabled: false
+- geoip:
+    match: CN
+    policy: DIRECT
+- default:
+    policy: PROXY
+url_rewrites:
+- match: ^https?://(www.)?(g|google)\.cn
+  location: https://www.google.com
+  status_code: 302
+- match: ^https?://(ditu|maps).google\.cn
+  location: https://maps.google.com
+  status_code: 302
+mitm:
+  enabled: true
