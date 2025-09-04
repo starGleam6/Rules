@@ -206,7 +206,7 @@ rules:
 - rule_set:
     name: Special
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Special.yaml
-    policy: Special
+    policy: DIRECT
     disabled: false
 - rule_set:
     name: PROXY
@@ -221,12 +221,7 @@ rules:
 - rule_set:
     name: Domestic IPs
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Domestic%20IPs.yaml
-    policy: Domestic_IPs
-    disabled: false
-- rule_set:
-    name: LAN
-    match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/LAN.yaml
-    policy: LAN
+    policy: Domestic
     disabled: false
 - rule_set:
     name: Netflix
@@ -251,192 +246,192 @@ rules:
 - rule_set:
     name: Bilibili
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Bilibili.yaml
-    policy: Bilibili
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: IQ
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/IQ.yaml
-    policy: IQI
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: IQIYI
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/IQIYI.yaml
-    policy: IQYI
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: Letv
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Letv.yaml
-    policy: Letv
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: Netease Music
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Netease%20Music.yaml
-    policy: Netease_Music
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: Tencent Video
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Tencent%20Video.yaml
-    policy: Tencent_Video
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: Youku
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Youku.yaml
-    policy: Youku
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: WeTV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/WeTV.yaml
-    policy: WeTV
+    policy: CN Mainland TV
     disabled: false
 - rule_set:
     name: ABC
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/ABC.yaml
-    policy: ABC
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Abema TV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Abema%20TV.yaml
-    policy: Abema_TV
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Amazon
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Amazon.yaml
-    policy: Amazon
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Apple Music
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20Music.yaml
-    policy: Apple_Music
+    policy: Apple TV
     disabled: false
 - rule_set:
     name: Apple News
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20News.yaml
-    policy: Apple_News
+    policy: Apple TV
     disabled: false
 - rule_set:
     name: Apple TV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Apple%20TV.yaml
-    policy: Apple_TV
+    policy: Apple TV
     disabled: false
 - rule_set:
     name: Bahamut
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Bahamut.yaml
-    policy: Bahamut
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: BBC iPlayer
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/BBC%20iPlayer.yaml
-    policy: BBC_iPlayer
+    policy: Global TV
     disabled: false
 - rule_set:
     name: DAZN
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/DAZN.yaml
-    policy: DAZN
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Discovery Plus
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Discovery%20Plus.yaml
-    policy: Discovery_Plus
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Disney Plus
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Disney%20Plus.yaml
-    policy: Disney_Plus
+    policy: Disney Plus
     disabled: false
 - rule_set:
     name: DMM
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/DMM.yaml
-    policy: DMM
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: encoreTVB
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/encoreTVB.yaml
-    policy: encoreTVB
+    policy: Global TV
     disabled: false
 - rule_set:
     name: F1 TV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/F1%20TV.yaml
-    policy: F1_TV
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Fox Now
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Fox%20Now.yaml
-    policy: Fox_Now
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Fox+
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Fox%2B.yaml
-    policy: Fox+
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Hulu Japan
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Hulu%20Japan.yaml
-    policy: Hulu_Japan
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Hulu
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Hulu.yaml
-    policy: Hulu
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Japonx
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Japonx.yaml
-    policy: Japonx
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: JOOX
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/JOOX.yaml
-    policy: JOOX
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: KKBOX
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/KKBOX.yaml
-    policy: KKBOX
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: KKTV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/KKTV.yaml
-    policy: KKTV
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Line TV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Line%20TV.yaml
-    policy: Line_TV
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: myTV SUPER
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/myTV%20SUPER.yaml
-    policy: myTV_SUPER
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Niconico
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Niconico.yaml
-    policy: Niconico
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Pandora
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Pandora.yaml
-    policy: Pandora
+    policy: Global TV
     disabled: false
 - rule_set:
     name: PBS
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/PBS.yaml
-    policy: PBS
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Pornhub
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Pornhub.yaml
-    policy: Pornhub
+    policy: Global TV
     disabled: false
 - rule_set:
     name: Soundcloud
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/Soundcloud.yaml
-    policy: Soundcloud
+    policy: Global TV
     disabled: false
 - rule_set:
     name: ViuTV
     match: https://testingcf.jsdelivr.net/gh/starGleam6/Rules@main/Egern/Provider/Media/ViuTV.yaml
-    policy: ViuTV
+    policy: Asian TV
     disabled: false
 - rule_set:
     name: Telegram
@@ -507,7 +502,7 @@ rules:
     match: CN
     policy: DIRECT
 - default:
-    policy: PROXY
+    policy: 🚀 节点选择
 url_rewrites:
 - match: ^https?://(www.)?(g|google)\.cn
   location: https://www.google.com
