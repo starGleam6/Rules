@@ -187,6 +187,8 @@ policy_groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
 - auto_test:
     name: ♻️ 自动切换
+    policies:
+    - 🚀 节点选择
     flatten: true
     interval: 3600
     tolerance: 100
