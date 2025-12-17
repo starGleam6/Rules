@@ -13,11 +13,15 @@ DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,production-openaicom-storage.azureedge.net
-
 DOMAIN-SUFFIX,cdn.oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
-
 DOMAIN,o33249.ingest.sentry.io
+
+# > Cerebras
+DOMAIN-SUFFIX,cerebras.ai
+
+# > Chorus
+DOMAIN-SUFFIX,chorus.sh
 
 # > Claude
 DOMAIN-SUFFIX,anthropic.com
@@ -27,17 +31,6 @@ DOMAIN-SUFFIX,claudeusercontent.com
 # > Cloudflare AI Gateway
 DOMAIN,gateway.ai.cloudflare.com
 
-# > DIA
-DOMAIN-SUFFIX,diabrowser.engineering
-
-# > Windsurf
-DOMAIN-SUFFIX,windsurf.com
-DOMAIN-SUFFIX,codeium.com
-DOMAIN-SUFFIX,codeiumdata.com
-
-# > Chorus
-DOMAIN-SUFFIX,chorus.sh
-
 # > Copilot
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,microsoftonline.com
@@ -46,16 +39,23 @@ DOMAIN,copilot.microsoft.com
 # > Cursor
 DOMAIN-SUFFIX,cursor.sh
 
+# > DIA
+DOMAIN-SUFFIX,diabrowser.engineering
+
 # > Dify.AI
 DOMAIN-SUFFIX,dify.ai
 
 # > GitHub Copilot
 DOMAIN,api.github.com
 
-# > Google Gemini
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,gemini.google.com
+# > Google AI Studio
+DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN,ai.google.dev
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,waa-pa.clients6.google.com
 
 # > Google DeepMind
 DOMAIN-SUFFIX,deepmind.com
@@ -66,14 +66,12 @@ DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 
-# > Google AI Studio
-DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN,ai.google.dev
-DOMAIN,alkalicore-pa.clients6.google.com
-DOMAIN,waa-pa.clients6.google.com
+# > Google Gemini
+DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
 
 # > Google NotebookLM
 DOMAIN-SUFFIX,notebooklm.google
@@ -89,6 +87,9 @@ DOMAIN-SUFFIX,groq.com
 # > Jasper
 DOMAIN-SUFFIX,clipdrop.co
 DOMAIN-SUFFIX,jasper.ai
+
+# > JetBrains
+DOMAIN-SUFFIX,jetbrains.ai
 
 # > Meta AI
 DOMAIN-SUFFIX,meta.ai
@@ -106,13 +107,22 @@ DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,poe.com
 
 # > Siri
-DOMAIN,apple-relay.apple.com
-DOMAIN,apple-relay.cloudflare.com
-DOMAIN,guzzoni.smoot.apple.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
 
 # > Sora
 DOMAIN-SUFFIX,sora.com
 DOMAIN,sora-cdn.oaistatic.com
+
+# > Windsurf
+DOMAIN-SUFFIX,windsurf.com
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,codeiumdata.com
 
 # > Zed
 DOMAIN-SUFFIX,zed.dev

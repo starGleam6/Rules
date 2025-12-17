@@ -9,20 +9,12 @@
   - RULE-SET,Max,Max
   - RULE-SET,Spotify,Spotify
 
-  - RULE-SET,Bilibili,CN Mainland TV
-  - RULE-SET,IQ,CN Mainland TV
-  - RULE-SET,IQIYI,CN Mainland TV
-  - RULE-SET,Letv,CN Mainland TV
-  - RULE-SET,Netease Music,CN Mainland TV
-  - RULE-SET,Tencent Video,CN Mainland TV
-  - RULE-SET,WeTV,CN Mainland TV
-  - RULE-SET,Youku,CN Mainland TV
-
   - RULE-SET,Abema TV,Asian TV
   - RULE-SET,Bahamut,Asian TV
   - RULE-SET,DMM,Asian TV
   - RULE-SET,Fox+,Asian TV
   - RULE-SET,Hulu Japan,Asian TV
+  - RULE-SET,IQ,Asian TV
   - RULE-SET,Japonx,Asian TV
   - RULE-SET,JOOX,Asian TV
   - RULE-SET,KKBOX,Asian TV
@@ -46,6 +38,14 @@
   - RULE-SET,PBS,Global TV
   - RULE-SET,Pornhub,Global TV
   - RULE-SET,Soundcloud,Global TV
+
+  - RULE-SET,Bilibili,CN Mainland TV
+  - RULE-SET,IQIYI,CN Mainland TV
+  - RULE-SET,Letv,CN Mainland TV
+  - RULE-SET,Netease Music,CN Mainland TV
+  - RULE-SET,Tencent Video,CN Mainland TV
+  - RULE-SET,WeTV,CN Mainland TV
+  - RULE-SET,Youku,CN Mainland TV
 
   - RULE-SET,Telegram,Telegram
 
@@ -89,19 +89,12 @@ script:
             'YouTube': 'YouTube',
             'Max': 'Max',
             'Spotify': 'Spotify',
-            'Bilibili': 'CN Mainland TV',
-            'IQ': 'CN Mainland TV',
-            'IQIYI': 'CN Mainland TV',
-            'Letv': 'CN Mainland TV',
-            'Netease Music': 'CN Mainland TV',
-            'Tencent Video': 'CN Mainland TV',
-            'Youku': 'CN Mainland TV',
-            'WeTV': 'CN Mainland TV',
             'Abema TV': 'Asian TV',
             'Bahamut': 'Asian TV',
             'DMM': 'Asian TV',
             'Fox+': 'Asian TV',
             'Hulu Japan': 'Asian TV',
+            'IQ': 'Asian TV',
             'Japonx': 'Asian TV',
             'JOOX': 'Asian TV',
             'KKBOX': 'Asian TV',
@@ -123,6 +116,13 @@ script:
             'PBS': 'Global TV',
             'Pornhub': 'Global TV',
             'Soundcloud': 'Global TV',
+            'Bilibili': 'CN Mainland TV',
+            'IQIYI': 'CN Mainland TV',
+            'Letv': 'CN Mainland TV',
+            'Netease Music': 'CN Mainland TV',
+            'Tencent Video': 'CN Mainland TV',
+            'Youku': 'CN Mainland TV',
+            'WeTV': 'CN Mainland TV',
             'Apple Music': 'Apple TV',
             'Apple News': 'Apple TV',
             'Apple TV': 'Apple TV',
