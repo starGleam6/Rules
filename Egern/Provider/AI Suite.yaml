@@ -21,6 +21,7 @@ domain_suffix_set:
   # > Claude
   - anthropic.com
   - claude.ai
+  - claude.com
   - claudeusercontent.com
 
 
@@ -48,6 +49,7 @@ domain_suffix_set:
   # > Google Gemini
   - apis.google.com
   - bard.google.com
+  - gemini.google
   - gemini.google.com
 
   # > Google DeepMind
@@ -97,6 +99,15 @@ domain_suffix_set:
 
   # > Sora
   - sora.com
+  
+  # > TRAE
+  - trae.ai
+  - traeapi.us
+
+  # > Windsurf
+  - windsurf.com
+  - codeium.com
+  - codeiumdata.com
 
   # > Zed
   - zed.dev
