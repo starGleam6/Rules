@@ -136,9 +136,17 @@ domain_set:
   - waa-pa.clients6.google.com
 
   # > Siri
+  - amp-api.apps.apple.com
   - apple-relay.apple.com
   - apple-relay.cloudflare.com
-  - guzzoni.smoot.apple.com
+  - apple-relay.fastly-edge.com
+  - apple-relay.mask.apple-dns.net
+  - apps.mzstatic.com
+  - cp4.cloudflare.com
+  - gateway.icloud.com
+  - guzzoni.apple.com
+  - gspe1-ssl.ls.apple.com
+  - smoot.apple.com
 
   # > Sora
   - sora-cdn.oaistatic.com
